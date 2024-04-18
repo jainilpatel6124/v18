@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0 50px;
+    background-color: #e5e5e5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+
+/* Additional CSS styles as needed */
+
+  .app {
+    background-color: #fff;
+    width: 900px;
+    height: 700px;
+    border: 5px solid #abcea1;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: scroll;
+
+  }
+  
+  .app::-webkit-scrollbar {
+    width: 0 !important;
+    
+  }
+  
+  #addNew {
+    height: 60px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(171, 206, 161, 0.35);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fa-plus {
+    background-color: #abcea1;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  /* buuton  */
+  .button {
+    border-radius: 4px;
+    background-color: #33a07f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 5px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  /* #tasks {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 14px;
+    
+    
+
+  } */
+  
+  #tasks div {
+    border: 3px solid #abcea1;
+    background-color: #e2eede;
+    border-radius: 6px;
+    padding: 15px;
+    
+    row-gap: 20px;
+ 
+ 
+   
+  }
+  
+  #tasks div .options {
+    display: flex;
+     justify-content:center;
+   margin-top: 10px;
+    gap: 20px;
+  }
+  
+  #tasks div .options i {
+    cursor: pointer;
+  }
+  
+  #msg {
+    color: red;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #34e89e, #0f3443);
+    animation: gradientAnimation 10s infinite alternate;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+   
+
+  /* new */
+  /* Add some hover effects */
+#addNew:hover {
+  background-color: rgba(171, 206, 161, 0.45);
+}
+
+#tasks div:hover {
+  background-color: #ddd;
+}
+
+/* Add some transition effects */
+#addNew {
+  transition: background-color 0.3s ease;
+  
+}
+
+#tasks div {
+  transition: background-color 0.3s ease;
+}
+
+/* Add some box-shadow effects */
+#addNew {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+#tasks div {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some border-radius effects */
+#tasks div {
+  border-radius: 10px;
+}
+
+/* Add some font-size effects */
+#tasks div p {
+  font-size: 18px;
+}
+
+/* Add some padding effects */
+#tasks div {
+  padding: 15px;
+  
+}
+
+/* Add some margin effects */
+#tasks div {
+  margin-top: 15px ;
+}
+select {
+  
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ /* search */
+
+  
+ .search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.input-search {
+  height: 40px;
+  width: 40px;
+  border-style: none;
+ 
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22737a;
+  padding-right: 40px;
+  color: rgba(19, 18, 18, 0.5);
+}
+
+.input-search::placeholder {
+  color: rgba(19, 18, 18, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.btn-search {
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 60%;
+  position: absolute;
+  right: 0px;
+  color: #2fdaaf;
+  background-color: transparent;
+  pointer-events: painted;
+  
+}
+
+/* Only apply hover effect on larger screens */
+@media (min-width: 768px) {
+  .btn-search:hover ~ .input-search,
+  .input-search:hover {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(27, 25, 25, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+}
+
+/* Hide the input field by default on smaller screens */
+@media (max-width: 767px) {
+  .btn-search:hover ~ .input-search,
+  .input-search:hover {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(27, 25, 25, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+}
